@@ -1,9 +1,9 @@
 #!/bin/bash
 # sintaxe: ./suffle-traffic host iterations step_seconds step_band
 # Example: ./shuffle-traffic 127.0.0.1 1 2 10
-# Requisites: the connection host should run 2 instances of iperf3, one on default port (5201) and another on port (5202); the local host should have iperf3 installed
+# Requisites: the connection server should run 2 instances of iperf3, one on default port (5201) and another on port (5202); the localhost should have iperf3 installed
 
-host=$1
+server=$1
 iterations=$2
 step_seconds=$3
 step_band=$4
@@ -29,9 +29,9 @@ do
 
 	sleep 2
 
-	iperf3 -c $host -Z -t $time -b $upload > /dev/null &
+	iperf3 -c $server -Z -t $time -b $upload > /dev/null &
 
-	iperf3 -c $host -R -Z -t $time -b $download -p 5202 > /dev/null
+	iperf3 -c $server -R -Z -t $time -b $download -p 5202 > /dev/null
 
 	echo End of execution $i
 done
