@@ -1,4 +1,7 @@
 #!/bin/bash
+# sintaxe: ./suffle-traffic host iterations step_seconds step_band
+# Example: ./shuffle-traffic 127.0.0.1 1 2 10
+# Requisite: the connection host should run 2 instances of iperf3, one on default port (5201) and another on port (5203). 
 
 host=$1
 iterations=$2
@@ -15,21 +18,21 @@ do
 	time=`shuf -i 1-10 -n 1`
 	time="$(($time*$step_seconds))"
 	echo The shuffle time is: $time seconds
-	
+
 	download=`shuf -i 1-10 -n 1`
 	download="$(($download*$step_band))"m
 	echo The shuffle download bandwidth is: "$download"bps
-	
+
 	upload=`shuf -i 1-10 -n 1`
 	upload="$(($upload*$step_band))"m
 	echo The shuffle upload bandwidth is: "$upload"bps
 
 	sleep 2
 
-	iperf3 -c $host -Z -t $time -b $upload > /dev/null & 
+	iperf3 -c $host -Z -t $time -b $upload > /dev/null &
 
-	iperf3 -c $host -R -Z -t $time -b $download -p 5202 > /dev/null 
-	
+	iperf3 -c $host -R -Z -t $time -b $download -p 5202 > /dev/null
+
 	echo End of execution $i
 done
 
@@ -63,7 +66,7 @@ exit
 #Agendar execução via cron
 #Opção para realizar uploads e downloads em tempos diferentes
 #Criar GUI
-#Empacotar em um APP ? - Escrever em python, C++? 
+#Empacotar em um APP ? - Escrever em python, C++?
 
 #postar no git
 #colocar em inglês
@@ -98,7 +101,3 @@ exit
 #do
 #	echo "$i"
 #done
-
-
-
-
