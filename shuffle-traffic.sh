@@ -33,11 +33,18 @@ do
 
 	iperf3 -c $server -R -Z -t $time -b $download -p 5202 > /dev/null
 
+	wait
 	echo End of execution $i
-done
+	done
 
-wait
-echo "done"
+	wait
+	echo "End of script."
+
+
+
+
+
+
 
 exit
 
