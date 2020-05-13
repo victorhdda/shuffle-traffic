@@ -1,7 +1,7 @@
 #!/bin/bash
 # sintaxe: ./suffle-traffic host iterations step_seconds step_band
 # Example: ./shuffle-traffic 127.0.0.1 1 2 10
-# Requisite: the connection host should run 2 instances of iperf3, one on default port (5201) and another on port (5203). 
+# Requisite: the connection host should run 2 instances of iperf3, one on default port (5201) and another on port (5202). 
 
 host=$1
 iterations=$2
