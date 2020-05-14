@@ -44,7 +44,7 @@ exit
 
 
 #---------MELHORIAS
-
+# Adicionar um killall iperf3 no início do código para encerrar qualquer instância do iperf em execução que possivelmente esteja travando o servidor
 # Avaliar o link por um determinado ciclo, com execuções aleatórias e tempo(5,10,15 e 20 minutos) e banda (10, 20, 30, 40, 50, 60)
 #Receber parametros via comando de terminal
 #Referencial de download e upload em relação a máquina que executa o script
