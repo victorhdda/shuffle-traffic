@@ -41,11 +41,6 @@ do
 	echo "End of script."
 
 
-
-
-
-
-
 exit
 
 
