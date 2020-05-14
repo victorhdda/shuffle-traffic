@@ -2,6 +2,8 @@
 # sintaxe: ./suffle-traffic host iterations step_seconds step_band
 # Example: ./shuffle-traffic 127.0.0.1 1 2 10
 # Requisites: the connection server should run 2 instances of iperf3, one on default port (5201) and another on port (5202); the localhost should have iperf3 installed
+#Remover informações de utilização para o readme, ciar orientações de uso e prerequisitos
+
 
 server=$1
 iterations=$2
