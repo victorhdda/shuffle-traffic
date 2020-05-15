@@ -1,0 +1,21 @@
+PING g1.com.br (186.192.90.5): 56 data bytes
+64 bytes from 186.192.90.5: icmp_seq=0 ttl=242 time=18.611 ms
+64 bytes from 186.192.90.5: icmp_seq=1 ttl=242 time=19.008 ms
+64 bytes from 186.192.90.5: icmp_seq=2 ttl=242 time=18.873 ms
+--- g1.com.br ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 18.611/18.831/19.008/0.165 ms
+PING google.com (172.217.29.46): 56 data bytes
+64 bytes from 172.217.29.46: icmp_seq=0 ttl=45 time=22.083 ms
+64 bytes from 172.217.29.46: icmp_seq=1 ttl=45 time=22.171 ms
+64 bytes from 172.217.29.46: icmp_seq=2 ttl=45 time=22.272 ms
+--- google.com ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 22.083/22.175/22.272/0.077 ms
+PING terra.com.br (208.84.244.116): 56 data bytes
+64 bytes from 208.84.244.116: icmp_seq=0 ttl=42 time=206.183 ms
+64 bytes from 208.84.244.116: icmp_seq=1 ttl=42 time=175.942 ms
+64 bytes from 208.84.244.116: icmp_seq=2 ttl=42 time=196.888 ms
+--- terra.com.br ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 175.942/193.004/206.183/12.648 ms
