@@ -46,32 +46,29 @@ exit
 
 #---------MELHORIAS
 
-# Avaliar o link por um determinado ciclo, com execuções aleatórias e tempo(5,10,15 e 20 minutos) e banda (10, 20, 30, 40, 50, 60)
-#Receber parametros via comando de terminal
-#Referencial de download e upload em relação a máquina que executa o script
 #Calculo de tempo de execução máximo step_seconds*10*iterations
-
-
-#Receber parâmetros do servidor via terminal: IP, número de interações, step_seconds, step band - OK
+#Informar tempo estimado de execução em horas e dias
+# Inserir tempos de paradas aleatórios (com base no step_seconds)
 
 #Receber endereços IP de vários servidores
 #Escanear a rede em busca de servidores ativos
 #Modo full auto, detecta velocidade máxima de banda e trabalha com ela
 #Inserir comando de parada, interrupçaõ de execuções
-#Informar tempo estimado de execução em horas e dias
+
 #Tornar a conexão persistente para o cliente e servidor, em casos de quedas do link
 
 #Enviar para um arquivo as estatísticas de execução, talvez apenas a útilma linha de execução do iperf
-#Opção para atuar em modo duplex opcional
+#Opção para atuar em modo duplex opcional - OK
 #Inserir tempo de parada?
 
 #Agendar execução via cron
-#Opção para realizar uploads e downloads em tempos diferentes
+#Opção para realizar uploads e downloads em tempos diferentes - OK Via parallel
 #Criar GUI
-#Empacotar em um APP ? - Escrever em python, C++?
+#Empacotar em um APP, package ? - Escrever em python, C++?
 
-#postar no git
-#colocar em inglês
+#postar no git - OK
+#colocar em inglês - OK
+# Comentar código
 
 #------------------
 
