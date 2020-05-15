@@ -29,9 +29,9 @@ do
 
 	sleep 2
 
-	iperf3 -c $server -Z -t $time -b $upload & >/dev/null
+	iperf3 -c $server -Z -t $time -b $upload &
 
-	iperf3 -c $server -R -Z -t $time -b $download -p 5202 >/dev/null
+	iperf3 -c $server -R -Z -t $time -b $download -p 5202
 
 	wait
 	echo End of execution $i

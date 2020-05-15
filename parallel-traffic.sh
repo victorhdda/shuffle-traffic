@@ -25,10 +25,10 @@ do
 
   if [[ $direction -eq 1 ]]; then
     echo reverso
-    iperf3 -c $server -R -Z -t $time -b $bandwidth -p 5202
+    iperf3 -c $server -R -Z -t $time -b $bandwidth -p 5202 >/dev/null
 
   else
-    iperf3 -c $server -Z -t $time -b $bandwidth
+    iperf3 -c $server -Z -t $time -b $bandwidth > /dev/null
   fi
 
 
