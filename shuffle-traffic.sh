@@ -50,6 +50,10 @@ exit
 #Informar tempo estimado de execução em horas e dias
 # Inserir tempos de paradas aleatórios (com base no step_seconds)
 
+#Utilziar nohup no código
+#Exportar dados .csv
+#Utilizar parâmetros de execução baseados em letras: -b -r ao invés de variáveis.
+
 #Receber endereços IP de vários servidores
 #Escanear a rede em busca de servidores ativos
 #Modo full auto, detecta velocidade máxima de banda e trabalha com ela
