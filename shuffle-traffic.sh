@@ -50,9 +50,10 @@ exit
 #Informar tempo estimado de execução em horas e dias
 # Inserir tempos de paradas aleatórios (com base no step_seconds)
 
-#Utilziar nohup no código
+#Utilziar nohup no código: https://www.vivaolinux.com.br/dica/O-comando-nohup
 #Exportar dados .csv
 #Utilizar parâmetros de execução baseados em letras: -b -r ao invés de variáveis.
+# https://github.com/tmgstevens/iperf-scripting/blob/master/iperf.sh / https://github.com/tmgstevens/iperf-scripting
 
 #Receber endereços IP de vários servidores
 #Escanear a rede em busca de servidores ativos
@@ -61,7 +62,7 @@ exit
 
 #Tornar a conexão persistente para o cliente e servidor, em casos de quedas do link
 
-#Enviar para um arquivo as estatísticas de execução, talvez apenas a útilma linha de execução do iperf
+#Enviar para um arquivo as estatísticas de execução, talvez apenas a útilma linha de execução do iperf: https://github.com/tmgstevens/iperf-scripting/blob/master/iperf-multiway.sh
 #Opção para atuar em modo duplex opcional - OK
 #Inserir tempo de parada?
 
@@ -73,6 +74,10 @@ exit
 #postar no git - OK
 #colocar em inglês - OK
 # Comentar código
+
+
+#Seção de help:
+#https://github.com/rveznaver/NagiosBandwidthCheck/blob/master/check_iperf
 
 #------------------
 
