@@ -30,7 +30,7 @@ timex2=$((timex * 2)) # devem ser usados 2 parênteses
 echo $timex2
 
 sleep 1
-max=40m
+max=200m
 min=15m
 
 space=$((timex / 10))
