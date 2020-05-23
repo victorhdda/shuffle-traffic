@@ -40,7 +40,7 @@ min=15m #min bandwidth, not used.
 #space=$((timex / 10)) # not used anymore
 
 for (( i=0; i<${#morse}; i++ )); do
-  echo "${morse:$i:1}"
+  #echo "${morse:$i:1}" #for debug
 
   sleep 1
 
