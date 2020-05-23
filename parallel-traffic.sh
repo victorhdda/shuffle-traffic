@@ -39,3 +39,4 @@ done
 exit
 
 # Colocar case para outros tipos de de execuções
+# morse code image to graphs
