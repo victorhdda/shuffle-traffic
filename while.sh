@@ -12,3 +12,5 @@ done
 
 
 exit
+
+#exit commented
