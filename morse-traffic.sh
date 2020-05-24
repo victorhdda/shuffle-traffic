@@ -33,7 +33,6 @@ for (( i=0; i<${#morse}; i++ )); do
   var=${morse:$i:1}
 
   if [[ "$var" == "."  ]]; then
-
     iperf3 -c $server -Z -t $timex -b $max >/dev/null & #UPLOAD
     iperf3 -c $server -R -Z -t $timex -b $max -p 5202 >/dev/null #download
     wait
@@ -48,10 +47,11 @@ for (( i=0; i<${#morse}; i++ )); do
     wait
 
   elif [[ "$var" == "/"  ]]; then
-    #echo "/"
     sleep $timex # sleep interval for slash caracter
     wait
   fi
+
 sleep $timex # sleep interval between caracters
 done
+
 exit
