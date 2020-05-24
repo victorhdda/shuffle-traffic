@@ -11,7 +11,7 @@ morse=$3
 
 echo $num_char
 
-echo -e "The following message $morse will be sent to iperf3 server at IP: $server. \nCharacter duration set to $timex [s]. \nThis will long $(($timex * ${#morse})) [s]."
+echo -e "The following message $morse will be sent to iperf3 server at IP: $server. \nCharacter duration set to $timex [s]. \nThis will long ~ $(($timex * 3 * ${#morse} + ${#morse})) [s]."
 
 #Set double duration for dash caracter
 timex2=$((timex * 2))
