@@ -2,7 +2,7 @@
 #Move to validation and then pull request to master
 #Morse traffic generator
 #Usage message:
-[ $# -eq 0 ] && { echo -e "Usage: $0 [IP address] [time(seconds)] '[morse_code]' \n IP address of IPERF3 server \n Time is the trasnmission's duration of every code \n morse_code should be put between ''. Accepter caracters dot(.) dash (-) back slash (/) space ( )  \nS O S Ex: $0 127.0.0.1 5 '... / --- / ...'"; exit 1; }
+[ $# -eq 0 ] && { echo -e "Usage: $0 [IP address] [time(seconds)] '[morse_code]' \n IP address of IPERF3 server \n Time is the trasnmission's duration of every code \n morse_code should be put between ''. Accepted caracters dot(.) dash (-) back slash (/) space ( )  \nS O S Ex: $0 127.0.0.1 5 '... / --- / ...'"; exit 1; }
 
 #Set vars
 server=$1
@@ -36,12 +36,12 @@ for (( i=0; i<${#morse}; i++ )); do
   elif [[ "$var" == " "  ]]; then
     sleep $timex # sleep interval for space caracter
     wait
-  sleep $timex # sleep interval between caracters
 
   elif [[ "$var" == "/"  ]]; then
     #echo "/"
-    sleep $timex # sleep interval for space caracter
+    sleep $timex # sleep interval for slash caracter
   wait
+
 fi
 sleep $timex # sleep interval between caracters
 done
