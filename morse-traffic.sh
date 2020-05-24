@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 #Move to validation and then pull request to master
 #Morse traffic generator
 #Usage message:
@@ -8,14 +8,24 @@
 server=$1
 timex=$2
 morse=$3
-
-echo $num_char
-
-echo -e "The following message $morse will be sent to iperf3 server at IP: $server. \nCharacter duration set to $timex [s]. \nThis will long ~ $(($timex * 3 * ${#morse} + ${#morse})) [s]."
-
-#Set double duration for dash caracter
 timex2=$((timex * 2))
 max=200m #max bandwidth
+
+#Time calculation
+cont_dash=0 #dash counter
+cont_other=0
+for (( i=0; i<${#morse}; i++ )); do
+  var=${morse:$i:1}
+  if [[ "$var" == "-" ]]; then
+    let "cont_dash++"
+  fi
+done
+
+duration=$(($timex*2*${#morse}+$cont_dash*$timex+${#morse}+1)) #time_of_each_char * 2 (space_time) * number_of_chars + number_of_dash*time_of_each_char + sleep_of_each_for
+duration=$(date -d@$duration -u +%dd%Hh%Mm%Ss)
+
+echo -e "The following message $morse will be sent to iperf3 server at IP: $server. \nCharacter duration set to $timex [s]. \nThis will long ~ $duration."
+
 
 for (( i=0; i<${#morse}; i++ )); do
   #echo "${morse:$i:1}" #for debug
@@ -40,9 +50,8 @@ for (( i=0; i<${#morse}; i++ )); do
   elif [[ "$var" == "/"  ]]; then
     #echo "/"
     sleep $timex # sleep interval for slash caracter
-  wait
-
-fi
+    wait
+  fi
 sleep $timex # sleep interval between caracters
 done
 exit
