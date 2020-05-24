@@ -2,7 +2,7 @@
 #Move to validation and then pull request to master
 #Morse traffic generator
 #Usage message:
-[ $# -eq 0 ] && { echo -e "Usage: $0 [IP address] [time(seconds)] '[morse_code]' \n IP address of IPERF3 server \n Time is the trasnmission's duration of every code \n morse_code should be put between ''. Accepted caracters dot(.) dash (-) back slash (/) space ( )  \nS O S Ex: $0 127.0.0.1 5 '... / --- / ...'"; exit 1; }
+[ $# -eq 0 ] && { echo -e "Usage: $0 [IP address] [time(seconds)] '[morse_code]' \n IPERF3 server's IP address.  \n Time: character time duration. \n morse_code should be put between ''. Accepted caracters dot(.) dash (-) slash (/) space ( )  \n S O S Ex: $0 127.0.0.1 5 '... / --- / ...'"; exit 1; }
 
 #Set vars
 server=$1
@@ -11,7 +11,7 @@ morse=$3
 
 echo $num_char
 
-echo -e "The following message $morse will be sent to iperf3 server at IP: $server in intervals of $timex [s]. \nThis will take $(($timex * ${#morse})) [s]"
+echo -e "The following message $morse will be sent to iperf3 server at IP: $server. \nCharacter duration set to $timex [s]. \nThis will long $(($timex * ${#morse})) [s]."
 
 #Set double duration for dash caracter
 timex2=$((timex * 2))
