@@ -5,7 +5,7 @@
 #Usage message:
 [ $# -eq 0 ] && { echo -e "Usage: $0 [IP address] [number_of_executions] [step_time] [step_bandwidth] [reverso_enable]\n [IP address]: IPERF3 server's IP address. \n [number_of_executions]: Number of executions \n [step_time]: (seconds) step of aleatory time duration, will be aleatory multiplyed by (1..10). \n [step_bandwidth]: (mbps) step of aleatory bandwidth between server and client, will be aleatory multiplyed by (1..10).\n [reverso_enable]: should be 1 (enabled), 0 (disabled) or empty (disabled). Reverse execution requires iperf3 server on port 5202 \n Ex.: $0 127.0.0.1 5 10 120 \n Ex. reverso enabled: $0 127.0.0.1 5 10 120 1 \n Ex. running with linux parallel: parallel ::: 'bash $0 127.0.0.1 5 10 120 ' 'bash $0 127.0.0.1 5 10 120 1'" ; exit 1; }
 
-#Vars set
+#Set vars
 server=$1
 iterations=$2
 step_seconds=$3
