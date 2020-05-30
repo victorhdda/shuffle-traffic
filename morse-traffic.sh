@@ -1,5 +1,5 @@
 #!/bin/bash
-#Author: github.com/victorhdda licenceses and refereces are linked at the author repository.
+#Author: github.com/victorhdda licenses and refereces are linked at the author repository.
 #This script generate a traffic between server and client. The max and min bandwidth traffic are a result of  transcoded morse code input. The result can be visualized through network graphics tools like (zabbix, mrtg, or linux speedometer).
 
 #Usage message:

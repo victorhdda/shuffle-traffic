@@ -1,5 +1,5 @@
 #!/bin/bash
-#Author: github.com/victorhdda licenceses and refereces are linked at the author repository.
+#Author: github.com/victorhdda licenses and refereces are linked at the author repository.
 #This script evaluate de traffic between server and client in a shuffled way. It can be associated wit linux parallel to mix rx and tx traffic at same time and have a better evaluation of capabilities of your connection. Most of bandwidth tests evaluate Rx and Tx in a separeted tests, not evaluating the real capabilities of the network to deal with duplex connections.
 
 #Usage message:

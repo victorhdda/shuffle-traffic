@@ -1,5 +1,5 @@
 #!/bin/bash
-#Author: github.com/victorhdda licenceses and refereces are linked at the author repository.
+#Author: github.com/victorhdda licenses and refereces are linked at the author repository.
 #This script generate a traffic between server and client. The max and min bandwidth traffic are shuffled.
 # Pre-requisites: the connection server should run 2 instances of iperf3, one on default port (5201) and another on port (5202); the localhost should have iperf3 installed
 
